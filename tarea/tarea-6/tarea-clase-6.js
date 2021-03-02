@@ -131,6 +131,22 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
         }
       })
     return cantidadErrores;
+}
 
+function validarEdades(){
+    const errores={};
+    edades=obtenerEdadesIntegrantes()
+    for(let i=0; i<edades.length; i++){
+      errores[`Campo_${i+1}`]=validarEdad(edades[i])
+    }
+    const esExito = manejarErrores(errores)===0;
+      if(esExito){
+        const numeros = obtenerEdadesIntegrantes();
+        mostrarEdad('mayor', obtenerMayorNumero(numeros));
+        mostrarEdad('menor', obtenerMenorNumero(numeros));
+        mostrarEdad('promedio', obtenerPromedio(numeros));
+        mostrarResultados();
+      }
+     
   }
   
