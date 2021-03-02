@@ -7,7 +7,7 @@ la menor edad y el promedio del grupo familiar.
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente,
  borrando los inputs ya creados (investigar cómo en MDN).
 */
-
+$form = document.querySelector("#calculador-edades");
 document.querySelector('#siguiente-paso').onclick = function(event) {
     const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');
     const cantidadIntegrantes = Number($cantidadIntegrantes.value);
@@ -99,7 +99,7 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   }
   
   function validarEdad(edad){
-      if(edad===""){
+      if(edad===0){
           return "El campo edad no puede estar vacio"
       }
       if(!/^[0-9]+$/.test(edad)){
