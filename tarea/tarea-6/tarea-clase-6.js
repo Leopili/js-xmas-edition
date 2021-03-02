@@ -19,12 +19,7 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   };
   
   document.querySelector('#calcular').onclick = function(event) {
-    const numeros = obtenerEdadesIntegrantes();
-    mostrarEdad('mayor', obtenerMayorNumero(numeros));
-    mostrarEdad('menor', obtenerMenorNumero(numeros));
-    mostrarEdad('promedio', obtenerPromedio(numeros));
-    mostrarResultados();
-  
+    validarEdades();
     event.preventDefault();
   };
   
@@ -71,6 +66,7 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
     borrarIntegrantesAnteriores();
     ocultarBotonCalculo();
     ocultarResultados();
+    ocultarErrores();
   }
   
   function ocultarBotonCalculo() {
@@ -150,3 +146,7 @@ function validarEdades(){
      
   }
 
+  function ocultarErrores(){
+    $errores = document.querySelector("#errores");
+    $errores.className="oculto";
+  }
