@@ -94,6 +94,7 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
     const edades = [];
     for (let i = 0; i < $integrantes.length; i++) {
       edades.push(Number($integrantes[i].value));
+      $error.innerText = `${key}: ${error}`;
     }
     return edades;
   }
