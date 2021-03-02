@@ -58,6 +58,7 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
     $label.textContent = 'Edad del integrante #: ' + (indice + 1);
     const $input = document.createElement('input');
     $input.type = 'number';
+    $input.name = `Campo_${indice+1}`;
   
     $div.appendChild($label);
     $div.appendChild($input);
@@ -101,3 +102,14 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
     return edades;
   }
   
+  function validarEdad(edad){
+      if(edad===""){
+          return "El campo edad no puede estar vacio"
+      }
+      if(!/^[0-9]+$/.test(edad)){
+          return "El campo edad no puede contener números decimales, ni letras";
+      }
+      else{
+          return "";
+      }
+  }
