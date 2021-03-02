@@ -113,3 +113,24 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
           return "";
       }
   }
+
+  function manejarErrores(errores){
+      const keys = Object.keys(errores);
+      const $errores= document.querySelector("#errores");
+      let cantidadErrores=0;
+      keys.forEach(function(key){
+        const error = errores[key];
+        if(error){
+            cantidadErrores++;
+            $form[key].className="error";
+            const $error=document.createElement("li");
+            $error.innerText=error;
+            $errores.appendChild($error);
+        }else{
+            $form[key].className="";
+        }
+      })
+    return cantidadErrores;
+
+  }
+  
