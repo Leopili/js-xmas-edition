@@ -3,9 +3,9 @@
 }
 
 .error {
-    border: 2px solid red;
+    border: 1px solid red;
 }
 
-.integrante{
+.integrante, ul li{
     margin: 15px 0;
 }
