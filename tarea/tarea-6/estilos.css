@@ -1,0 +1,11 @@
+.oculto{
+    display: none;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.integrante, ul li{
+    margin: 15px 0;
+}
