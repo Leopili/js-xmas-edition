@@ -6,32 +6,35 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="estilos.css"/>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"/>
     <title>Tarea 6</title>
 </head>
-<body>
+<body class="body">
+<div class="container">
+    <h1 id="titulo">Calculador de estadísticas descriptivas de las edades de un grupo familiar</h1>
+    <form id="calculador-edades">
+        <div class="row">
+            <label for="cantidad-integrantes">Ingrese la cantidad de integrantes del grupo familiar</label>
+            <input type="number" id="cantidad-integrantes"/>
+            <button type="submit" id="siguiente-paso">Siguiente</button>
+        </div>
+        <div id="integrantes">
 
-<form id="calculador-edades">
-    <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
-    <input type="number" id="cantidad-integrantes"/>
-    <button type="submit" id="siguiente-paso">Siguiente</button>
+        </div>
+        <ul id="errores">
 
-    <div id="integrantes">
+        </ul>
+        <button type="button" id="calcular" class="oculto">Calcular</button>
 
-    </div>
-    <ul id="errores">
+        <div id="analisis" class="oculto">
+            <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
+            <p>La menor edad es: <strong id="menor-edad"></strong></p>
+            <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+        </div>
 
-    </ul>
-    <button type="button" id="calcular" class="oculto">Calcular</button>
-
-    <div id="analisis" class="oculto">
-        <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
-        <p>La menor edad es: <strong id="menor-edad"></strong></p>
-        <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
-    </div>
-
-    <button type="reset" id="resetear">Resetear</button>
-</form>
-
+        <button type="reset" id="resetear">Resetear</button>
+    </form>
+</div>
 <script type="text/javascript" src="calculos.js"></script>
 <script type="text/javascript" src="tarea-clase-6.js"></script>
 </body>

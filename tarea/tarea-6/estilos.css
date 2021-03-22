@@ -1,3 +1,7 @@
+.body{
+    background-color: lightgrey;
+}
+
 .oculto{
     display: none;
 }
@@ -8,4 +12,69 @@
 
 .integrante, ul li{
     margin: 15px 0;
+}
+
+form{
+    margin-top: 20px;
+}
+
+#cantidad-integrantes{
+    margin: 0 20px;
+    border: darkgreen 1px solid;
+    background-color: darkgrey;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#titulo{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color:brown;
+}
+
+label{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: darkblue;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.integrante label{
+    font-size: 18px;
+    font-family: sans-serif;
+    color:darkgoldenrod;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#siguiente-paso, #calcular, #resetear{
+    border: red solid 1px;
+    border-radius: 6%;
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+input[type="number"]{
+    border: darkgreen 1px solid;
+    background-color: darkgrey;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#analisis{
+    margin-top: 30px;
+}
+
+#analisis p{
+    font-size: 18px;
+    font-family: sans-serif;
+    color:darkgoldenrod;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
